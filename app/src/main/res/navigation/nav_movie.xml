@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_movie"
+    app:startDestination="@id/movieListFragment">
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:label="@string/app_name"
+        android:name="com.aravind.twmobileapp.ui.view.fragment.MovieListFragment">
+        <action
+            android:id="@+id/movieDetailListFragment"
+            app:destination="@id/movieDetailListFragment"
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailListFragment"
+        android:name="com.aravind.twmobileapp.ui.view.fragment.MovieDetailInforFragment"
+        android:label="@string/app_name">
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="description"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+</navigation>
